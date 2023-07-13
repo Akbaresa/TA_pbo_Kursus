@@ -20,7 +20,6 @@ public class KaryawanController {
     }
 
     public Karyawan getKaryawan(int index) {
-        insertKaryawan();
         return AllModelObject.karyawan.getKaryawan(index);
     }
 }

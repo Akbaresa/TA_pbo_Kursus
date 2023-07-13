@@ -20,7 +20,10 @@ public class PembeliController {
     }
 
     public Pembeli getPembeli(int index) {
-        insertPembeli();
         return AllModelObject.pembeli.getPembeli(index);
+    }
+
+    public int loginMember(String nama, String password) {
+        return AllModelObject.pembeli.loginMember(nama, password);
     }
 }

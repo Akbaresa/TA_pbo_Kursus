@@ -1,4 +1,4 @@
-package view.HomePageView;
+package view.pembeliPageView;
 
 import java.util.Scanner;
 
@@ -13,6 +13,7 @@ public class KaryawanView {
         nama = inp.next();
         System.out.println("password : ");
         password = inp.next();
+        
 
     }
 }

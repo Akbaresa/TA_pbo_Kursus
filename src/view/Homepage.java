@@ -1,7 +1,8 @@
 package view;
 
 import java.util.Scanner;
-import view.HomePageView.*;
+
+import view.pembeliPageView.*;
 
 public class HomePage {
     int pilih;
@@ -9,6 +10,8 @@ public class HomePage {
 
     public void HomeView() {
         objC.barangC.insertBarang();
+        objC.pembeliC.insertPembeli();
+        objC.karyawanC.insertKaryawan();
         do {
 
             System.out.println("Selamat datang di Betamart");

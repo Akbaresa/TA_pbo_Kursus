@@ -14,4 +14,19 @@ public class PembeliModel {
         return listPembeli.get(index);
     }
 
+    public int getListPembeli() {
+        return listPembeli.size();
+    }
+
+    public int loginMember(String nama, String password) {
+        int cekLogin = 0;
+        while (cekLogin < getListPembeli()) {
+            if (nama.equals(getPembeli(cekLogin).getNama()) &&
+                    password.equals(getPembeli(cekLogin).getPassword())) {
+                return cekLogin;
+            }
+            cekLogin++;
+        }
+        return -1;
+    }
 }

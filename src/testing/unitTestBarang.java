@@ -3,10 +3,11 @@ package testing;
 import org.junit.Assert;
 import org.junit.Test;
 
-import controller.AllModelObject;
+import controller.*;
 import entity.Barang;
 
 public class unitTestBarang {
+
     // unit testing
     @Test
     public void testSetNamaBarang() throws Exception {
@@ -69,4 +70,5 @@ public class unitTestBarang {
         // Assert
         Assert.assertEquals(beforeRemove, afterRemove);
     }
+
 }

@@ -1,7 +1,5 @@
 package controller;
 
-import java.util.List;
-
 import entity.Barang;
 
 public class BarangController {
@@ -26,7 +24,6 @@ public class BarangController {
 
     // method get
     public Barang getBarang(int index) {
-        insertBarang();
         return AllModelObject.barang.getBarang(index);
     }
 
