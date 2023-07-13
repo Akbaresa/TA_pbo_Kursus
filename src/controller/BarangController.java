@@ -1,5 +1,7 @@
 package controller;
 
+import java.util.List;
+
 import entity.Barang;
 
 public class BarangController {
@@ -16,6 +18,10 @@ public class BarangController {
         for (int i = 0; i < stokBarang.length; i++) {
             AllModelObject.barang.addBarang(new Barang(namaBarang[i], hargaBarang[i], stokBarang[i]));
         }
+    }
+
+    public int getListBarang() {
+        return AllModelObject.barang.getListBarang();
     }
 
     // method get

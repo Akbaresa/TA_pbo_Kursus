@@ -34,6 +34,10 @@ public class BarangModel {
         return 0;
     }
 
+    public int getListBarang() {
+        return listBarang.size();
+    }
+
     public Barang getBarang(int index) {
         return listBarang.get(index);
     }
