@@ -1,14 +1,16 @@
 package view.pembeliPageView;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+import utils.*;
 import view.objC;
 
 public class PembeliView {
     MemberView member = new MemberView();
     Scanner inp = new Scanner(System.in);
+    LocalDate localDate = LocalDate.now();
     int pilih;
     String bayar;
 
@@ -52,8 +54,17 @@ public class PembeliView {
                 }
             } while (bayar.equals("y"));
             System.out.println("Total harga: " + totalHarga);
-            member.loginMember(totalHarga);
-            System.out.println("terimakasih telah berbelanja di sini");
+            Double bayar = member.loginMember(totalHarga);
+            if (bayar > 0) {
+                System.out.println("\nStruk Transaksi");
+                System.out.println("-------------------------------------------");
+                System.out.println("Transaksi Tanggal " + localDate);
+                System.out.println("Uang Anda : " + Format.formatRupiah(bayar));
+                System.out.println("Kembalian : " + Format.formatRupiah(bayar - totalHarga));
+                System.out.println("-------------------------------------------");
+
+            }
+            System.out.println("terimakasih telah berbelanja di sini\n\n");
         } catch (Exception e) {
             System.out.println("input yang anda masukkan tidak valid");
         }

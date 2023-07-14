@@ -22,4 +22,8 @@ public class KaryawanController {
     public Karyawan getKaryawan(int index) {
         return AllModelObject.karyawan.getKaryawan(index);
     }
+
+    public int loginKaryawan(String id, String pw) {
+        return AllModelObject.karyawan.loginKaryawan(id, pw);
+    }
 }

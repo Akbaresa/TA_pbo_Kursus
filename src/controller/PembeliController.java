@@ -11,7 +11,7 @@ public class PembeliController {
                 "12", "12", "12"
         };
         Double uang[] = {
-                100000.00, 230000.00, 10000.00
+                100000.00, 230000.00, 160000.00
         };
 
         for (int i = 0; i < uang.length; i++) {

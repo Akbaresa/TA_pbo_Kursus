@@ -22,9 +22,11 @@ public class MemberView {
             System.out.print("masukkan password : ");
             String password = inp.next();
             int hasil = objC.pembeliC.loginMember(nama, password);
+
             if (hasil != -1) {
                 System.out.print("\033[H\033[2J");
                 System.out.flush();
+                System.out.println("\nStruk Transaksi");
                 System.out.println("-------------------------------------------");
                 System.out.println("halo selamat datang " + objC.pembeliC.getPembeli(hasil).getNama());
                 System.out.println("tanggal " + localDate);
@@ -34,8 +36,10 @@ public class MemberView {
                 System.out.println("update saldo anda : "
                         + Format.formatRupiah(objC.pembeliC.getPembeli(hasil).getUang() - totalBeli));
                 System.out.println("-------------------------------------------");
-                return objC.pembeliC.getPembeli(hasil).getUang();
+                return -1.0;
+
             } else {
+
                 System.out.print("masukkan uang anda untuk membayar : ");
                 bayar = inp.nextDouble();
                 return bayar;

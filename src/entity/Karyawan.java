@@ -8,7 +8,7 @@ public class Karyawan extends Member {
         this.id = id;
     }
 
-    public String id() {
+    public String getId() {
         return id;
     }
 

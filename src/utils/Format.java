@@ -10,7 +10,7 @@ public class Format {
         symbols.setGroupingSeparator('.');
         symbols.setMonetaryDecimalSeparator(',');
 
-        DecimalFormat rupiahFormat = new DecimalFormat("Rp# , #,##0.00", symbols);
+        DecimalFormat rupiahFormat = new DecimalFormat("Rp # , #,##0.00", symbols);
         return rupiahFormat.format(amount);
     }
 }

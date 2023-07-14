@@ -2,6 +2,7 @@ package view;
 
 import java.util.Scanner;
 
+import view.karyawanPageView.KaryawanView;
 import view.pembeliPageView.*;
 
 public class HomePage {
@@ -9,9 +10,7 @@ public class HomePage {
     Scanner inp = new Scanner(System.in);
 
     public void HomeView() {
-        objC.barangC.insertBarang();
-        objC.pembeliC.insertPembeli();
-        objC.karyawanC.insertKaryawan();
+
         do {
 
             System.out.println("Selamat datang di Betamart");
@@ -23,7 +22,7 @@ public class HomePage {
             pilih = inp.nextInt();
             switch (pilih) {
                 case 1:
-
+                    new KaryawanView().loginKaryawanView();
                     break;
                 case 2:
                     new PembeliView().pembeliView();
